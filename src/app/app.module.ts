@@ -6,6 +6,8 @@ import { Test1Component } from './components/test1/test1.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { TicketsComponent } from './components/tickets/tickets.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HeaderComponent } from './components/header/header.component';
+import {TicketService} from './services/ticket.service';
 
 @NgModule({
   declarations: [
@@ -13,12 +15,13 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     Test1Component,
     TicketComponent,
     TicketsComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [TicketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
