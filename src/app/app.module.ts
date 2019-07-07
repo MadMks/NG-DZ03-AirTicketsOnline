@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { Test1Component } from './components/test1/test1.component';
@@ -19,7 +20,8 @@ import {TicketService} from './services/ticket.service';
     HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [TicketService],
   bootstrap: [AppComponent]
