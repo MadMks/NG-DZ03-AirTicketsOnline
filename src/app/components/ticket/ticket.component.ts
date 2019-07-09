@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Ticket} from '../../models/Ticket';
 
 @Component({
   selector: 'app-ticket',
@@ -7,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TicketComponent implements OnInit {
 
-  @Input() ticket;
+  @Input() ticket: Ticket;
 
   constructor() { }
 
