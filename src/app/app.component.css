@@ -6,9 +6,9 @@
   padding-left: 20px;
   padding-right: 20px;
 }
-.row{
-  display: flex;
-}
+/*.row{*/
+/*  display: flex;*/
+/*}*/
 .content{
   flex: 1;
 }

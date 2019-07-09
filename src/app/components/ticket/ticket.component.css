@@ -1,0 +1,13 @@
+.ticket-sidebar{
+  width: 200px;
+  border-right: 1px solid #ecf2f3;
+  padding: 25px 20px;
+}
+.ticket-content{
+  flex: 1;
+}
+.ticket-logo{
+  width: 120px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}

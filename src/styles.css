@@ -3,7 +3,21 @@
   margin: 0px;
   padding: 0px;
 }
+html{
+  box-sizing: border-box;
+}
+html *, html :after, html :before {
+  box-sizing: inherit;
+}
 body{
   font: 16px Open Sans,sans-serif;
   background-color: #f3f7fa;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.row{
+  display: flex;
 }
