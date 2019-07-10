@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransferFilterComponent implements OnInit {
 
+  private isNeedToFilter = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  checkFilterValues() {
+    console.log(this.isNeedToFilter);
   }
 
 }

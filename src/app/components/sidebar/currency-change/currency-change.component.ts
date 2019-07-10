@@ -11,5 +11,4 @@ export class CurrencyChangeComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

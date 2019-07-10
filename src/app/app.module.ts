@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import {TicketService} from './services/ticket.service';
 import { CurrencyChangeComponent } from './components/sidebar/currency-change/currency-change.component';
 import { TransferFilterComponent } from './components/sidebar/transfer-filter/transfer-filter.component';
+import { CheckboxComponent } from './components/sidebar/transfer-filter/checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TransferFilterComponent } from './components/sidebar/transfer-filter/tr
     SidebarComponent,
     HeaderComponent,
     CurrencyChangeComponent,
-    TransferFilterComponent
+    TransferFilterComponent,
+    CheckboxComponent
   ],
   imports: [
     BrowserModule,
