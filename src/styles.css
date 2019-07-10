@@ -3,6 +3,10 @@
   margin: 0px;
   padding: 0px;
 }
+body, html {
+  min-height: 100%;
+  position: relative;
+}
 html{
   box-sizing: border-box;
 }
@@ -13,6 +17,9 @@ body{
   font: 16px Open Sans,sans-serif;
   background-color: #f3f7fa;
 }
+div{
+  display: block;
+}
 img {
   display: block;
   max-width: 100%;
@@ -20,4 +27,10 @@ img {
 
 .row{
   display: flex;
+}
+
+.style-card{
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(51, 108, 142, 0.25);
 }

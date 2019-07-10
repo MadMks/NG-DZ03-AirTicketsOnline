@@ -1,8 +1,5 @@
 .ticket{
-  display: block;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 1px 4px rgba(51, 108, 142, 0.25);
+  /*display: block;*/
 }
 .ticket + .ticket{
   margin-top: 20px;

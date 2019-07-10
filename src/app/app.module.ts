@@ -3,21 +3,23 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { Test1Component } from './components/test1/test1.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { TicketsComponent } from './components/tickets/tickets.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import {TicketService} from './services/ticket.service';
+import { CurrencyChangeComponent } from './components/sidebar/currency-change/currency-change.component';
+import { TransferFilterComponent } from './components/sidebar/transfer-filter/transfer-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Test1Component,
     TicketComponent,
     TicketsComponent,
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    CurrencyChangeComponent,
+    TransferFilterComponent
   ],
   imports: [
     BrowserModule,
