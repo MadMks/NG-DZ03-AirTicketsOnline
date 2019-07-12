@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {CheckboxValuesService} from '../../../services/checkbox-values.service';
 
 @Component({
   selector: 'app-transfer-filter',
@@ -10,17 +11,21 @@ export class TransferFilterComponent implements OnInit {
   private isNeedToFilter = false;
   private checkboxValues: boolean[];
 
-  constructor() {
-    this.checkboxValues = [
-      false,
-      false,
-      false,
-      false,
-      false
-    ];
+  private checkboxValuesService;
+
+  constructor(checkboxValuesService: CheckboxValuesService) {
+    this.checkboxValuesService = checkboxValuesService;
+    // this.checkboxValues = [
+    //   false,
+    //   false,
+    //   false,
+    //   false,
+    //   false
+    // ];
   }
 
   ngOnInit() {
+    this.checkboxValues = this.checkboxValuesService.getValues();
   }
 
   // checkFilterValues($event) {
@@ -44,12 +49,14 @@ export class TransferFilterComponent implements OnInit {
     // Если все false (флажки сняты)
     if (!this.checkboxValues.includes(true, 0)) {
       // TODO: показать все билеты
-      console.log('all false');
+      console.log('all false = show all');
     } else if (this.checkboxValues[0] === true
       && !this.checkboxValues.includes(true, 1)) {
       // TODO: показать все билеты
       // TODO: выбрать все флажки
       console.log('show all');
+    } else {
+      // Иначе нужно Фильтровать
     }
   }
 

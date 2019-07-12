@@ -11,6 +11,7 @@ import {TicketService} from './services/ticket.service';
 import { CurrencyChangeComponent } from './components/sidebar/currency-change/currency-change.component';
 import { TransferFilterComponent } from './components/sidebar/transfer-filter/transfer-filter.component';
 import { CheckboxComponent } from './components/sidebar/transfer-filter/checkbox/checkbox.component';
+import {CheckboxValuesService} from './services/checkbox-values.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { CheckboxComponent } from './components/sidebar/transfer-filter/checkbox
     BrowserModule,
     HttpClientModule
   ],
-  providers: [TicketService],
+  providers: [TicketService, CheckboxValuesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
