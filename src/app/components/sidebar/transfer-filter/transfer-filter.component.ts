@@ -9,7 +9,6 @@ import {CheckboxValuesService} from '../../../services/checkbox-values.service';
 export class TransferFilterComponent implements OnInit {
 
   private checkboxValues: boolean[];
-  private checkboxes: boolean[] = [];
   private eventCheckboxName: string;
 
   private checkboxValuesService;
@@ -20,10 +19,6 @@ export class TransferFilterComponent implements OnInit {
 
   ngOnInit() {
     this.checkboxValues = this.checkboxValuesService.getValues();
-    for (let i = 0; i < 5; i++) {
-      this.checkboxes[i] = false;
-    }
-    console.log(this.checkboxes);
   }
 
   saveFilterValues($event) {
