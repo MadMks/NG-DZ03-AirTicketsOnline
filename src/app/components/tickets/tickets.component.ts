@@ -29,14 +29,11 @@ export class TicketsComponent implements OnInit {
 
   changeDisplay(ticket: Ticket) {
     if (!this.checkboxValues.includes(true, 0)) {
-      // TODO: показать все билеты
-      console.log('all false = show all');
+      // Показать все билеты
       return true;
     } else if (this.checkboxValues[0] === true
       && !this.checkboxValues.includes(true, 1)) {
-      // TODO: показать все билеты
-      // TODO: выбрать все флажки
-      console.log('show all');
+      // Показать все билеты
       return true;
     }
     // Если нужно фильтровать

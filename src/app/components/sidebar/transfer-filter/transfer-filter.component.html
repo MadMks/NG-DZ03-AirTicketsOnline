@@ -4,35 +4,28 @@
 
   <label class="checkbox">
     <input type="checkbox" (input)="saveFilterValues($event)"
-           name="0" [(ngModel)]="checkboxValues[0]">
+           name="0" [ngModel]="checkboxValues[0]">
     <p>Все</p>
   </label>
   <label class="checkbox">
     <input type="checkbox" (input)="saveFilterValues($event)"
-           name="1" [(ngModel)]="checkboxValues[1]">
+           name="1" [ngModel]="checkboxValues[1]">
     <p>Без пересадок</p>
   </label>
   <label class="checkbox">
     <input type="checkbox" (input)="saveFilterValues($event)"
-           name="2" [(ngModel)]="checkboxValues[2]">
+           name="2" [ngModel]="checkboxValues[2]">
     <p>1 пересадка</p>
   </label>
   <label class="checkbox">
     <input type="checkbox" (input)="saveFilterValues($event)"
-           name="3" [(ngModel)]="checkboxValues[3]">
+           name="3" [ngModel]="checkboxValues[3]">
     <p>2 пересадки</p>
   </label>
   <label class="checkbox">
     <input type="checkbox" (input)="saveFilterValues($event)"
-           name="4" [(ngModel)]="checkboxValues[4]">
+           name="4" [ngModel]="checkboxValues[4]">
     <p>3 пересадки</p>
   </label>
-
-  <hr>
-
-<!--  <app-checkbox *ngFor="let item of [1, 2, 3]"-->
-<!--    (checkEvent)="checkFilterValues($event)"-->
-<!--    [numberCheckbox]="item">-->
-<!--  </app-checkbox>-->
 
 </div>

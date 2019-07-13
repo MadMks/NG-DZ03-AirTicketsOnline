@@ -10,7 +10,6 @@ import { HeaderComponent } from './components/header/header.component';
 import {TicketService} from './services/ticket.service';
 import { CurrencyChangeComponent } from './components/sidebar/currency-change/currency-change.component';
 import { TransferFilterComponent } from './components/sidebar/transfer-filter/transfer-filter.component';
-import { CheckboxComponent } from './components/sidebar/transfer-filter/checkbox/checkbox.component';
 import {CheckboxValuesService} from './services/checkbox-values.service';
 import {FormsModule} from '@angular/forms';
 
@@ -22,8 +21,7 @@ import {FormsModule} from '@angular/forms';
     SidebarComponent,
     HeaderComponent,
     CurrencyChangeComponent,
-    TransferFilterComponent,
-    CheckboxComponent
+    TransferFilterComponent
   ],
   imports: [
     BrowserModule,
