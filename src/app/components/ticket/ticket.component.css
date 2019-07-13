@@ -1,3 +1,6 @@
+.ticket{
+  margin-bottom: 20px;
+}
 .ticket-sidebar{
   width: 200px;
   border-right: 1px solid #ecf2f3;
@@ -11,7 +14,14 @@
   margin: 0 auto;
   padding-bottom: 20px;
 }
+.btn{
+  display: table;
+  background-color: #ff6d00;
+  box-shadow: 0 1px 0 #d64d08, 0 2px 1px rgba(0,0,0,.1);
+  color: #ffffff;
+  min-width: 160px;
+  padding: 6px 15px;
+  text-align: center;
+  border-radius: 5px;
 
-.ticket{
-  margin-bottom: 20px;
 }
