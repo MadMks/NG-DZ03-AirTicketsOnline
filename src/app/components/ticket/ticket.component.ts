@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Ticket} from '../../models/Ticket';
+import {CurrencyService} from 'src/app/services/currency.service';
 
 @Component({
   selector: 'app-ticket',
@@ -10,9 +11,16 @@ export class TicketComponent implements OnInit {
 
   @Input() ticket: Ticket;
 
-  constructor() { }
+  private currentCurrencyRate: number;
+
+  private currencyService;
+
+  constructor(currencyService: CurrencyService) {
+    this.currencyService = currencyService;
+  }
 
   ngOnInit() {
+    this.currentCurrencyRate = this.currencyService.getCurrentCurrencyRate();
   }
 
 }

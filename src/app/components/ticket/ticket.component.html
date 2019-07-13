@@ -6,7 +6,8 @@
       <div class="ticket-logo">
         <img src="/assets/img/logos/turkish-airlines-logo.png">
       </div>
-      Price: {{ticket.price}}</div>
+      Price: {{ticket.price * currencyService.getCurrentCurrencyRate()}}
+    </div>
 
     <div class="ticket-content">
       {{ticket.origin_name}} - {{ticket.stops}} -> {{ticket.destination_name}}
