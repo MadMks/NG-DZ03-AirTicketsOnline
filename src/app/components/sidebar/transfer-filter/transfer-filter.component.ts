@@ -8,55 +8,47 @@ import {CheckboxValuesService} from '../../../services/checkbox-values.service';
 })
 export class TransferFilterComponent implements OnInit {
 
-  private isNeedToFilter = false;
   private checkboxValues: boolean[];
+  private checkboxes: boolean[] = [];
+  private eventCheckboxName: string;
 
   private checkboxValuesService;
 
   constructor(checkboxValuesService: CheckboxValuesService) {
     this.checkboxValuesService = checkboxValuesService;
-    // this.checkboxValues = [
-    //   false,
-    //   false,
-    //   false,
-    //   false,
-    //   false
-    // ];
   }
 
   ngOnInit() {
     this.checkboxValues = this.checkboxValuesService.getValues();
+    for (let i = 0; i < 5; i++) {
+      this.checkboxes[i] = false;
+    }
+    console.log(this.checkboxes);
   }
 
-  // checkFilterValues($event) {
-  //   this.isNeedToFilter = $event;
-  //   console.log(this.isNeedToFilter);
-  // }
-
-  checkFilterValues($event) {
-    // console.log($event.target.checked + ' ' + $event.target.name);
+  saveFilterValues($event) {
     // Получение измененного значения чекбокса,
-    // и запись в соответствующее место в массиве
+    // и запись в соответствующее место в массиве (в сервис)
     this.checkboxValues[$event.target.name.toString()]
       = $event.target.checked;
+    // Запоминаем имя нажатого чекбокса.
+    this.eventCheckboxName = $event.target.name;
     // Изменение вывода билетов, на основе значений чекбоксов
-    this.changeTicketDisplay();
-    console.log();
-    console.log(this.checkboxValues);
+    this.changeFilterDisplay();
   }
 
-  changeTicketDisplay() {
-    // Если все false (флажки сняты)
-    if (!this.checkboxValues.includes(true, 0)) {
-      // TODO: показать все билеты
-      console.log('all false = show all');
+  changeFilterDisplay() {
+    // Если нажали "Все"
+    if (this.eventCheckboxName === '0'
+      && this.checkboxValues[0] === true) {
+      // Выбрать все флажки
+      for (let i = 1; i < this.checkboxValues.length; i++ ) {
+        this.checkboxValues[i] = true;
+      }
     } else if (this.checkboxValues[0] === true
-      && !this.checkboxValues.includes(true, 1)) {
-      // TODO: показать все билеты
-      // TODO: выбрать все флажки
-      console.log('show all');
-    } else {
-      // Иначе нужно Фильтровать
+      && this.checkboxValues.includes(false, 1)) {
+      // Если нажат "Все", и отжали один из флажков (кроме Все)
+      this.checkboxValues[0] = false;
     }
   }
 

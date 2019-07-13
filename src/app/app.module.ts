@@ -12,6 +12,7 @@ import { CurrencyChangeComponent } from './components/sidebar/currency-change/cu
 import { TransferFilterComponent } from './components/sidebar/transfer-filter/transfer-filter.component';
 import { CheckboxComponent } from './components/sidebar/transfer-filter/checkbox/checkbox.component';
 import {CheckboxValuesService} from './services/checkbox-values.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {CheckboxValuesService} from './services/checkbox-values.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [TicketService, CheckboxValuesService],
   bootstrap: [AppComponent]
