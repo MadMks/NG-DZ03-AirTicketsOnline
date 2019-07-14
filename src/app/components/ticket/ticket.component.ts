@@ -23,4 +23,12 @@ export class TicketComponent implements OnInit {
     this.currentCurrencyRate = this.currencyService.getCurrentCurrencyRate();
   }
 
+  convertCurrency(price: number) {
+    return Math.round(price / this.currencyService.getCurrentCurrencyRate());
+  }
+
+  getCurrencySign() {
+    return this.currencyService.getCurrentCurrencySign();
+  }
+
 }

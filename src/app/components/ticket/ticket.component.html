@@ -8,7 +8,7 @@
       </div>
       <a href="#" class="btn">
         Купить<br>
-        за {{ticket.price * currencyService.getCurrentCurrencyRate()}}
+        за {{convertCurrency(ticket.price)}} {{getCurrencySign()}}
       </a>
     </div>
 
