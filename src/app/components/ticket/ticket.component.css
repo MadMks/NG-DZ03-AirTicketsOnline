@@ -14,14 +14,16 @@
   margin: 0 auto;
   padding-bottom: 20px;
 }
-.btn{
+.btn-popup{
   display: table;
   background-color: #ff6d00;
   box-shadow: 0 1px 0 #d64d08, 0 2px 1px rgba(0,0,0,.1);
   color: #ffffff;
   min-width: 160px;
-  padding: 6px 15px;
+  padding: 10px 15px;
   text-align: center;
   border-radius: 5px;
-
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
 }

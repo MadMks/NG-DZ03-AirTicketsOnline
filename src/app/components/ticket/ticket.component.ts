@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Ticket} from '../../models/Ticket';
 import {CurrencyService} from 'src/app/services/currency.service';
+import {PopupService} from '../../services/popup.service';
 
 @Component({
   selector: 'app-ticket',
@@ -14,9 +15,12 @@ export class TicketComponent implements OnInit {
   private currentCurrencyRate: number;
 
   private currencyService;
+  private popupService;
 
-  constructor(currencyService: CurrencyService) {
+  constructor(currencyService: CurrencyService,
+              popupService: PopupService) {
     this.currencyService = currencyService;
+    this.popupService = popupService;
   }
 
   ngOnInit() {
@@ -29,6 +33,11 @@ export class TicketComponent implements OnInit {
 
   getCurrencySign() {
     return this.currencyService.getCurrentCurrencySign();
+  }
+
+  showPopup() {
+    console.log('ticket comp - show popup');
+    this.popupService.setShown(true);
   }
 
 }

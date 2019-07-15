@@ -6,10 +6,10 @@
       <div class="ticket-logo">
         <img src="/assets/img/logos/turkish-airlines-logo.png">
       </div>
-      <a href="#" class="btn">
+      <button class="btn-popup" (click)="showPopup()">
         Купить<br>
         за {{convertCurrency(ticket.price)}} {{getCurrencySign()}}
-      </a>
+      </button>
     </div>
 
     <div class="ticket-content">
