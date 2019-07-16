@@ -1,4 +1,39 @@
-/* TODO: temp for обычных инпутов */
 .checkbox{
   display: flex;
+  align-items: center;
+  padding: 8px 15px;
+}
+.checkbox-input{
+  display: none;
+}
+.checkbox-input:checked + .checkbox-icon {
+  border-color: #2196f3;
+}
+.checkbox-icon {
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #d2d5d6;
+  border-radius: 3px;
+  margin-right: 10px;
+  position: relative;
+}
+.checkbox-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iOXB4IiBoZWlnaHQ9IjdweCIgdmlld0JveD0iMCAwIDkgNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTIuMiAoNjcxNDUpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPlJlY3RhbmdsZSAzMjwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICAgICAgPGcgaWQ9IjEwMjQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjMuMDAwMDAwLCAtMzg3LjAwMDAwMCkiIHN0cm9rZT0iIzNFOUNFOCIgc3Ryb2tlLXdpZHRoPSIyIj4KICAgICAgICAgICAgPGcgaWQ9IkZpbHRlcnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMy4wMDAwMDAsIDE2MS4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJGaWx0ZXIt4oCTLVN0b3AtUXVhbnRpdHktQ29weSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDExNS4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICA8cG9seWxpbmUgaWQ9IlJlY3RhbmdsZS0zMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjQuNTAwMDAwLCAxMTQuNTAwMDAwKSBzY2FsZSgtMSwgMSkgcm90YXRlKC0yNzAuMDAwMDAwKSB0cmFuc2xhdGUoLTI0LjUwMDAwMCwgLTExNC41MDAwMDApICIgcG9pbnRzPSIyNC41IDExMS41IDI2LjUgMTEzLjUgMjIuNSAxMTcuNSI+PC9wb2x5bGluZT4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+) 50% no-repeat;
+  background-size: auto auto;
+  background-size: 10px 12px;
+  opacity: 0;
+}
+.checkbox-input:checked + .checkbox-icon::before {
+  opacity: 1;
+}
+.checkbox-text{
+  font-size: 13px;
 }

@@ -27,6 +27,9 @@ img {
 a{
   text-decoration: none;
 }
+label {
+  cursor: pointer;
+}
 
 .row{
   display: flex;
@@ -64,4 +67,18 @@ a{
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
+}
+
+.row-filter:not(:last-child){
+  margin-bottom: 30px;
+  display: block;
+}
+.sidebar-title{
+  padding: 0 15px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }

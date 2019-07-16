@@ -1,21 +1,24 @@
-<p>Валюта</p>
+<h3 class="sidebar-title">Валюта</h3>
 
-<div class="radiobox-group">
+<div class="radio-group">
 
-  <label class="radio-btn">
+  <label class="radio-col">
     <input type="radio" name="currencyGroup" value="UAH"
+           class="radio-input"
            (input)="changeCurrency($event)" [checked]="true">
-    <p>UAH</p>
+    <p class="radio-btn">UAH</p>
   </label>
-  <label class="radio-btn">
+  <label class="radio-col">
     <input type="radio" name="currencyGroup" value="USD"
+           class="radio-input"
            (input)="changeCurrency($event)">
-    <p>USD</p>
+    <p class="radio-btn">USD</p>
   </label>
-  <label class="radio-btn">
+  <label class="radio-col">
     <input type="radio" name="currencyGroup" value="EUR"
+           class="radio-input"
            (input)="changeCurrency($event)">
-    <p>EUR</p>
+    <p class="radio-btn">EUR</p>
   </label>
 
 </div>

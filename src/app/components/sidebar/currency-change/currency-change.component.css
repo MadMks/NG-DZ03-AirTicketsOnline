@@ -1,3 +1,37 @@
-.radio-btn{
+.radio-group{
+  padding: 0 15px;
+}
+.radio-group{
   display: flex;
+}
+.radio-col{
+  flex: 1;
+}
+.radio-input{
+  display: none;
+}
+.radio-input:checked+.radio-btn{
+  background-color: #2196f3;
+  border-color: #2196f3;
+  color: #fff;
+}
+.radio-btn{
+  height: 40px;
+  line-height: 38px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #2196f3;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #d2d5d6;
+  position: relative;
+}
+.radio-group .radio-col:first-child .radio-btn{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.radio-group .radio-col:last-child .radio-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
