@@ -36,8 +36,11 @@ export class TicketComponent implements OnInit {
   }
 
   showPopup() {
-    console.log('ticket comp - show popup');
     this.popupService.setShown(true);
+  }
+
+  sendTicketInfo(ticket: Ticket) {
+    this.popupService.setTicket(ticket);
   }
 
 }

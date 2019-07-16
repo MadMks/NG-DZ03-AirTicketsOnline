@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {Ticket} from '../models/Ticket';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class PopupService {
 
   private isShown = false;
+  private ticket: Ticket;
 
   constructor() { }
 
@@ -15,5 +17,13 @@ export class PopupService {
 
   public setShown(isShown: boolean) {
     this.isShown = isShown;
+  }
+
+  public getTicket() {
+    return this.ticket;
+  }
+
+  public setTicket(ticket: Ticket) {
+    this.ticket = ticket;
   }
 }

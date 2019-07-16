@@ -1,6 +1,6 @@
 .popup{
   /*display: none;*/
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
   width: 300px;
   position: fixed;
   top: 50%;
@@ -18,4 +18,35 @@
   top: 0;
   width: 100%;
   height: 100%;
+}
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+.modal-footer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.input-number{
+  width: 40px;
+  text-align: center;
+  margin-left: 7px;
 }
