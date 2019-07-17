@@ -31,6 +31,10 @@ export class PopupComponent implements OnInit {
     this.popupService.setShown(false);
   }
 
+  getCurrentPrice() {
+    return this.currentPrice;
+  }
+
   getTicketPrice() {
     return this.ticket.price;
   }

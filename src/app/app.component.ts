@@ -14,4 +14,8 @@ export class AppComponent {
   constructor(popupService: PopupService) {
     this.popupService = popupService;
   }
+
+  getIsPopupShown() {
+    return this.popupService.getShown();
+  }
 }

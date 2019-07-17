@@ -47,4 +47,8 @@ export class TransferFilterComponent implements OnInit {
     }
   }
 
+  getCheckboxValue(index) {
+    return this.checkboxValues[index];
+  }
+
 }
