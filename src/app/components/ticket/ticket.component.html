@@ -14,21 +14,20 @@
     </div>
 
     <div class="ticket-content">
-<!--      {{ticket.origin_name}} - {{ticket.stops}} -> {{ticket.destination_name}}-->
       <div class="ticket-info">
 
         <div class="ticket-start-plane">
-          <time class="ticket-time">16:20</time>
-          <p class="ticket-place">VVO, Владивосток</p>
-          <time class="ticket-date">12.05.18</time>
+          <time class="ticket-time">{{ticket.departure_time}}</time>
+          <p class="ticket-place">{{ticket.origin}}, {{ticket.origin_name}}</p>
+          <time class="ticket-date">{{ticket.departure_date}}</time>
         </div>
 
-        <p class="ticket-transfer-plane">3 пересадки</p>
+        <p class="ticket-transfer-plane">{{ticket.stops}} {{transferWord(ticket.stops)}}</p>
 
         <div class="ticket-end-plane">
-          <time class="ticket-time">22:10</time>
-          <p class="ticket-place">TLV, Тель-Авив</p>
-          <time class="ticket-date">12.05.18</time>
+          <time class="ticket-time">{{ticket.arrival_time}}</time>
+          <p class="ticket-place">{{ticket.destination}}, {{ticket.destination_name}}</p>
+          <time class="ticket-date">{{ticket.arrival_date}}</time>
         </div>
 
       </div>

@@ -43,4 +43,13 @@ export class TicketComponent implements OnInit {
     this.popupService.setTicket(ticket);
   }
 
+  transferWord(stops) {
+    if (stops === 0) {
+      return 'пересадок';
+    } else if (stops === 1) {
+      return 'пересадка';
+    }
+    return 'пересадки';
+  }
+
 }
