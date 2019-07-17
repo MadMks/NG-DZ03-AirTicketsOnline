@@ -9,8 +9,6 @@ import {map} from 'rxjs/operators';
 export class TicketService {
 
   private fileUrl = './assets/tickets.json';
-  private jsonURL = './assets/tickets.json';
-  // private tickets = [1, 2, 3, 4, 5];
   private tickets: Ticket[];
 
   constructor(private http: HttpClient) {

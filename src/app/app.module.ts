@@ -13,6 +13,7 @@ import { TransferFilterComponent } from './components/sidebar/transfer-filter/tr
 import {CheckboxValuesService} from './services/checkbox-values.service';
 import {FormsModule} from '@angular/forms';
 import { PopupComponent } from './components/popup/popup.component';
+import { SortTicketsPipe } from './pipes/sort-tickets.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PopupComponent } from './components/popup/popup.component';
     HeaderComponent,
     CurrencyChangeComponent,
     TransferFilterComponent,
-    PopupComponent
+    PopupComponent,
+    SortTicketsPipe
   ],
   imports: [
     BrowserModule,

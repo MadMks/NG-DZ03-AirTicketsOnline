@@ -1,4 +1,4 @@
-<div *ngFor="let item of tickets">
+<div *ngFor="let item of (tickets | sortTickets)">
   <app-ticket [ticket]="item"
               *ngIf="changeDisplay(item)"></app-ticket>
 </div>

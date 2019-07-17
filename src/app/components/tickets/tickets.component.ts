@@ -44,4 +44,16 @@ export class TicketsComponent implements OnInit {
     return false;
   }
 
+  getSortTickets() {
+    return this.tickets.sort( (a, b) => {
+      if (a.departureTime > b.departureTime) {
+        return 1;
+      }
+      if (a.departureTime < b.departureTime) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
 }
